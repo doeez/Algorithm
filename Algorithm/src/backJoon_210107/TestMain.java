@@ -1,4 +1,4 @@
-package reetCode_210107;
+package backJoon_210107;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,7 +8,7 @@ import java.io.OutputStreamWriter;
 
 public class TestMain {
 	public static void main(String[] args) {
-		/*
+		
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -20,7 +20,9 @@ public class TestMain {
 		} catch (IOException e) { //
 			e.printStackTrace();
 		}
-		*/
+		
+		
+		/*
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -32,5 +34,6 @@ public class TestMain {
 		} catch (IOException e) { //
 			e.printStackTrace();
 		}
+		*/
 	}
 }
