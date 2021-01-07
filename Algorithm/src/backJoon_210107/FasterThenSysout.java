@@ -26,6 +26,7 @@ public class FasterThenSysout {
 			}
 
 			bw.flush();
+			bw.close();
 		} catch (IOException e) { //
 			e.printStackTrace();
 		}
@@ -41,12 +42,14 @@ public class FasterThenSysout {
 				bw.write(i+"\n");
 			}
 			bw.flush();
+			bw.close();
 		} catch (IOException e) { //
 			e.printStackTrace();
 		}
 		 */
 		
 		// 백준 11021
+		/*
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -60,7 +63,28 @@ public class FasterThenSysout {
 			}
 
 			bw.flush();
+			bw.close();
 		} catch (IOException e) { //
+			e.printStackTrace();
+		}
+		*/
+		
+		// 백준 11022 
+		try {
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+			int cnt = Integer.parseInt(br.readLine());
+
+			for(int i = 0; i < cnt; i++) {
+				StringTokenizer st = new StringTokenizer(br.readLine());// StringTokenizer을 사용해서 " "(공백) 자르기
+				int a = Integer.parseInt(st.nextToken()); //첫번째 호출
+				int b = Integer.parseInt(st.nextToken()); //두번째 호출
+				bw.write("Case #"+(i+1)+": "+a+" + "+b+" = "+(a+b)+"\n");
+			}
+
+			bw.flush();
+			bw.close();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
