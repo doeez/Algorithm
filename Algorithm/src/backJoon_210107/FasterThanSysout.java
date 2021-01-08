@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class FasterThenSysout {
+public class FasterThanSysout {
 
 	// System.out.println보다 빠르게 출력하기.
 	public static void main(String[] args) {
