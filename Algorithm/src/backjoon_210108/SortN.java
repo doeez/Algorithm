@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
 
 public class SortN {
 	
@@ -16,7 +17,10 @@ public class SortN {
 	// 20 10 35 30 7
 	// 출력값
 	// 7 35
+	
+	// 코드 1 : split을 사용한 경우
 	public static void main(String[] args) {
+		/*
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -24,11 +28,11 @@ public class SortN {
 			
 			int cnt = Integer.parseInt(br.readLine());
 			String[] numbers = br.readLine().split(" ");
-			int min = Integer.parseInt(numbers[0]);
-			int max = Integer.parseInt(numbers[0]);
+			int min = 1000000;
+			int max = -1000000;
 			br.close();
 
-			for(i = 0; i < numbers.length; i++) {
+			for(i = 0; i < cnt; i++) {
 				if(min > Integer.parseInt(numbers[i]))
 					min = Integer.parseInt(numbers[i]);
 				
@@ -41,5 +45,33 @@ public class SortN {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		*/
+		
+		// 코드 2 : StringTokenizer을 사용한 경우
+		try {
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+			int cnt = Integer.parseInt(br.readLine());
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			int min = 1000001;
+			int max = -1000001;
+			br.close();
+
+			for(int i = 0; i < cnt; i++) {
+				int compare = Integer.parseInt(st.nextToken());
+				if(min > compare)
+					min = compare;
+				
+				if(max < compare)
+					max = compare;
+			}
+			bw.write(min+" "+max);
+			bw.flush();
+			bw.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 }
