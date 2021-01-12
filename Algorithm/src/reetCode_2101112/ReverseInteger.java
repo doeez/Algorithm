@@ -1,6 +1,6 @@
 package reetCode_2101112;
 
-public class TestMain {
+public class ReverseInteger {
 
 	// 입력받은 int x를 역순서로 만들어서 반환하라.
 	// 입력값 : 123, -321
