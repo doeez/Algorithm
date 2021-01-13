@@ -38,7 +38,7 @@ public class LoopSum {
 			int sum = 0;
 			
 			// 1번 방법
-			// 찾은 코드 그대로 이나 charAt의 값을 받아와서 -48을 하는 부분을 개선하고 싶어서 다른 방법을 찾아봄.
+			// 찾은 코드 그대로 이나 charAt의 값을 받아와서 -48을 하는 부분을 바꾸고 싶어서 다른방법을 찾아봄.
 			/*
 			for(int i=0;i<count;i++) {
 				int a = (int)(input.charAt(i));
@@ -46,7 +46,6 @@ public class LoopSum {
 			}
 			*/
 			// 2번 방법
-			// Character의 내장함수를 사용해서 int로 변환하면 -48을 할 필요 없음.
 			for(int i=0;i<count;i++) {
 				int a = Character.getNumericValue(input.charAt(i));
 				sum += a;
