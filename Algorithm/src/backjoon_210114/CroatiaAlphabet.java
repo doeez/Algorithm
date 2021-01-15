@@ -1,4 +1,4 @@
-package backjoon_120114;
+package backjoon_210114;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
