@@ -1,4 +1,4 @@
-package backjoon_210115;
+package backjoon_210122;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -21,17 +21,49 @@ public class WordChecker {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		try {
 			int wordCnt = Integer.parseInt(br.readLine());
-			int i,j;
 			int cnt = 0;
-			for(i = 0; i < wordCnt; i++) {
-				String str = br.readLine();
-				for(j = 0; j < str.length(); j++) {
-					
-				}
+			for(int i = 0; i < wordCnt; i++) {
+				if(check(br.readLine()) == true)
+					cnt++;
+				else
+					continue;
 			}
+			br.close();
+			System.out.println(cnt);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static boolean check(String str) {
+		// 알파벳 배열을 생성
+		boolean[] check = new boolean[26];
+		int prev = 0;
+	    
+		for (int i = 0; i < str.length(); i++) {
+			// 현재 위치의 문자
+			int now = str.charAt(i);
+
+			// 이전 문자와 현재 문자가 같지 않을경우
+			if (prev != now) {
+				// 해당 문자가 처음 나오는 경우(알파벳 배열의 index값이 false인 경우)
+				if (check[now - 'a'] == false ) {
+					// true 로 바꿔준다
+					check[now - 'a'] = true;
+					prev = now;
+				}
+				// 해당 문자가 이미 나온 적이 있는 경우
+				// 이전문자와 현재문자가 같지 않은 상태에서 이전에 나온적이 있는 문자가 나오게 되면 그룹 문자가 아니게됨.
+				else {
+					// 따라서 함수 종료
+					return false;
+				}
+			}
+			
+			// 이전 문자와 현재 문자가 같을경우 : 그룹문자
+			continue;
+		}
+		return true;
 	}
 
 }

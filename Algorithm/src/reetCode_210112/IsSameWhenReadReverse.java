@@ -1,4 +1,4 @@
-package reetCode_2101112;
+package reetCode_210112;
 
 public class IsSameWhenReadReverse {
 
